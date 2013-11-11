@@ -38,3 +38,6 @@ end
 group :development, :test do        
   gem "rspec-rails"
 end
+
+# Latest stable version as on 11.11.2013
+gem 'spree', '2.1.2'

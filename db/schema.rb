@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131111121649) do
+ActiveRecord::Schema.define(version: 20131111212426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -198,6 +198,10 @@ ActiveRecord::Schema.define(version: 20131111121649) do
     t.integer  "option_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "spree_option_values_variants", id: false, force: true do |t|
@@ -541,6 +545,15 @@ ActiveRecord::Schema.define(version: 20131111121649) do
   add_index "spree_stock_transfers", ["destination_location_id"], name: "index_spree_stock_transfers_on_destination_location_id", using: :btree
   add_index "spree_stock_transfers", ["number"], name: "index_spree_stock_transfers_on_number", using: :btree
   add_index "spree_stock_transfers", ["source_location_id"], name: "index_spree_stock_transfers_on_source_location_id", using: :btree
+
+  create_table "spree_store_credits", force: true do |t|
+    t.integer  "user_id"
+    t.decimal  "amount",           precision: 8, scale: 2, default: 0.0, null: false
+    t.decimal  "remaining_amount", precision: 8, scale: 2, default: 0.0, null: false
+    t.string   "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_tax_categories", force: true do |t|
     t.string   "name"

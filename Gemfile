@@ -41,3 +41,5 @@ end
 
 # Latest stable version as on 11.11.2013
 gem 'spree', '2.1.2'
+
+gem 'spree_auth_devise', :github => "spree/spree_auth_devise", :branch => '2-1-stable'

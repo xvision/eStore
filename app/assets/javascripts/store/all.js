@@ -10,3 +10,4 @@
 //= require store/spree_frontend
 
 //= require_tree .
+//= require store/spree_social_products

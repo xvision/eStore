@@ -250,7 +250,7 @@ table {
       }
 
       &.alt, &.odd {
-        background-color: lighten($link_text_color, 50);
+        background-color: lighten($link_text_color, 30);
       }
     }
   }

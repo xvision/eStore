@@ -12,6 +12,15 @@ GIT
       spree_frontend (~> 2.1.0)
 
 GIT
+  remote: git://github.com/xvision/spree_print_invoice.git
+  revision: 2ce9672a9b15ea07943b40f0818a540db14f92fb
+  branch: 2-1-stable
+  specs:
+    spree_print_invoice (2.0.0)
+      prawn (= 0.8.4)
+      spree_core (~> 2.0)
+
+GIT
   remote: git://github.com/xvision/spree_product_groups.git
   revision: 937098de2aa0065a4eea97e695ca6b8e8ae36314
   branch: 2-1-stable
@@ -162,6 +171,16 @@ GEM
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.3)
+    prawn (0.8.4)
+      prawn-core (>= 0.8.4, < 0.9)
+      prawn-core (>= 0.8.4, < 0.9)
+      prawn-layout (>= 0.8.4, < 0.9)
+      prawn-layout (>= 0.8.4, < 0.9)
+      prawn-security (>= 0.8.4, < 0.9)
+      prawn-security (>= 0.8.4, < 0.9)
+    prawn-core (0.8.4)
+    prawn-layout (0.8.4)
+    prawn-security (0.8.4)
     rabl (0.8.4)
       activesupport (>= 2.3.14)
     rack (1.5.2)
@@ -310,6 +329,7 @@ DEPENDENCIES
   sdoc
   spree (= 2.1.2)
   spree_auth_devise!
+  spree_print_invoice!
   spree_product_groups!
   spree_social_products!
   spree_store_credits!

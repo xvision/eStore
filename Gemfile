@@ -45,3 +45,4 @@ gem 'spree_product_groups', :github => "xvision/spree_product_groups", :branch =
 gem 'spree_auth_devise', :github => "spree/spree_auth_devise", :branch => '2-1-stable'
 gem 'spree_social_products', :github => "xvision/spree_social_products", :branch => '2-1-stable'
 gem 'spree_store_credits', :github => "xvision/spree_store_credits", :branch => '2-1-stable'
+gem 'spree_print_invoice' , :github => "xvision/spree_print_invoice", :branch => '2-1-stable'

@@ -1,0 +1,6 @@
+production:
+    rails:
+        server:
+            unique_name: eStore_web
+            extra_packages:
+                - imagemagick

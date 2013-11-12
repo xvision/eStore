@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131111212426) do
+ActiveRecord::Schema.define(version: 20131112071940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -285,6 +285,20 @@ ActiveRecord::Schema.define(version: 20131111212426) do
     t.string  "currency"
   end
 
+  create_table "spree_product_groups", force: true do |t|
+    t.string "name"
+    t.string "permalink"
+    t.string "order"
+  end
+
+  add_index "spree_product_groups", ["name"], name: "index_spree_product_groups_on_name", using: :btree
+  add_index "spree_product_groups", ["permalink"], name: "index_spree_product_groups_on_permalink", using: :btree
+
+  create_table "spree_product_groups_products", id: false, force: true do |t|
+    t.integer "product_id"
+    t.integer "product_group_id"
+  end
+
   create_table "spree_product_option_types", force: true do |t|
     t.integer  "position"
     t.integer  "product_id"
@@ -303,6 +317,15 @@ ActiveRecord::Schema.define(version: 20131111212426) do
   end
 
   add_index "spree_product_properties", ["product_id"], name: "index_product_properties_on_product_id", using: :btree
+
+  create_table "spree_product_scopes", force: true do |t|
+    t.string  "name"
+    t.text    "arguments"
+    t.integer "product_group_id"
+  end
+
+  add_index "spree_product_scopes", ["name"], name: "index_spree_product_scopes_on_name", using: :btree
+  add_index "spree_product_scopes", ["product_group_id"], name: "index_spree_product_scopes_on_product_group_id", using: :btree
 
   create_table "spree_products", force: true do |t|
     t.string   "name",                 default: "", null: false

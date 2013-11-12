@@ -41,7 +41,7 @@ end
 
 # Latest stable version as on 11.11.2013
 gem 'spree', '2.1.2'
-
+gem 'spree_product_groups', :github => "xvision/spree_product_groups", :branch => '2-1-stable'
 gem 'spree_auth_devise', :github => "spree/spree_auth_devise", :branch => '2-1-stable'
 gem 'spree_social_products', :github => "xvision/spree_social_products", :branch => '2-1-stable'
 gem 'spree_store_credits', :github => "xvision/spree_store_credits", :branch => '2-1-stable'

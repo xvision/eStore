@@ -12,6 +12,14 @@ GIT
       spree_frontend (~> 2.1.0)
 
 GIT
+  remote: git://github.com/xvision/spree_product_groups.git
+  revision: 937098de2aa0065a4eea97e695ca6b8e8ae36314
+  branch: 2-1-stable
+  specs:
+    spree_product_groups (1.0.0)
+      spree_core (~> 2.1.0)
+
+GIT
   remote: git://github.com/xvision/spree_social_products.git
   revision: d40e4c9a7a36eed14b3afdf025ccd7675918d9be
   branch: 2-1-stable
@@ -302,6 +310,7 @@ DEPENDENCIES
   sdoc
   spree (= 2.1.2)
   spree_auth_devise!
+  spree_product_groups!
   spree_social_products!
   spree_store_credits!
   therubyracer

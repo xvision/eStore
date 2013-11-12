@@ -11,3 +11,4 @@
 
 //= require_tree .
 //= require store/spree_social_products
+//= require store/spree_product_groups

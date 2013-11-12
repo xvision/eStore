@@ -6,6 +6,9 @@
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
 Spree.config do |config|
+
+# Sets default country to UK
+config.default_country_id = 3
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"

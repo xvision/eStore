@@ -957,8 +957,9 @@ div[data-hook="inside_cart_form"] {
 
 #user-info {
   margin-bottom: 15px;
-  border: $default_border;
-  padding: 10px;
+  margin-left: -5px;
+  # border: $default_border;
+  # padding: 10px;
 
   dd {
     margin-left: 0px;

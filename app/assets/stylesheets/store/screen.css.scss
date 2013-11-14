@@ -150,14 +150,14 @@ fieldset {
 
 input[type="submit"], input[type="button"],
 input[type= "reset"], button, a.button {
-  background-color: $link_text_color;
+  background-color: #F0F0F0;
   background-image: none;
   text-shadow: none;
-  color: $layout_background_color;
+  color: #797979;
   font-weight: bold;
   font-size: $button_font_size;
   font-family: $ff_base;
-  border: 1px solid $button_border_color;
+  border: 1px solid #797979;
   padding: 6px 10px 5px;
   vertical-align:  top;
 
@@ -168,12 +168,12 @@ input[type= "reset"], button, a.button {
      -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
        -o-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-  -webkit-border-radius: 0px;
-   -khtml-border-radius: 0px;
-     -moz-border-radius: 0px;
-      -ms-border-radius: 0px;
-       -o-border-radius: 0px;
-          border-radius: 0px;
+  -webkit-border-radius: 5px;
+   -khtml-border-radius: 5px;
+     -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
 
   &.large {
     padding: 7px 10px;
@@ -181,15 +181,18 @@ input[type= "reset"], button, a.button {
   }
 
   &.gray {
-    background-color: lighten($body_text_color, 20);
+    background-color: #797979;
+    text-shadow: none;
+    color: #F0F0F0;
     border-color: lighten($body_text_color, 10);
   }
 
   &:hover {
     background-image: none;
-    background-color: $body_text_color;
+    background-color: #F0F0F0;
+    text-shadow: none;
     border-color: $body_text_color;
-    color: $layout_background_color;
+    color: #797979;
   }
 }
 
@@ -206,7 +209,7 @@ input[type="checkbox"], label {
 a.button {
   display: inline-block;
   line-height: 15px;
-  margin-top: -2px;
+  margin-top: 0px;
   vertical-align: bottom;
 }
 

@@ -77,7 +77,7 @@ dl {
   }
   dt {
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: lettercase;
   }
   dd {
     margin-left: -23px;
@@ -234,7 +234,7 @@ p {
 table {
   thead {
     background-color: $table_head_color;
-    text-transform: uppercase;
+    text-transform: lettercase;
 
     tr {
       th {
@@ -357,7 +357,7 @@ nav#taxonomies {
       color: $link_text_color;
     }
     span {
-      text-transform: uppercase;
+      text-transform: lettercase;
       font-weight: bold;
     }
   }
@@ -418,7 +418,7 @@ nav#taxonomies {
 }
 
 .product-section-title {
-  text-transform: uppercase;
+  text-transform: lettercase;
   margin-top: 15px;
 }
 
@@ -507,7 +507,7 @@ ul#products {
 }
 
 .subtaxon-title {
-  text-transform: uppercase;
+  text-transform: lettercase;
 
   a {
     color: $link_text_color;
@@ -515,7 +515,7 @@ ul#products {
 }
 
 .search-results-title {
-  text-transform: uppercase;
+  text-transform: lettercase;
   border-bottom: $default_border;
   margin-bottom: 10px;
 }
@@ -528,7 +528,7 @@ ul#products {
   .filter-title {
     display: block;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: lettercase;
     border-bottom: 1px solid #ededed;
     margin-bottom: 5px;
     color: $link_text_color;
@@ -634,7 +634,7 @@ ul#products {
     float: left;
     margin-right: 20px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: lettercase;
     padding: 5px 20px;
     color: lighten($body_text_color, 20);
 
@@ -687,7 +687,7 @@ ul#products {
   margin-left: 0;
 
   h3 {
-    text-transform: uppercase;
+    text-transform: lettercase;
     font-size: $base_font_size + 2;
     border-bottom: $default_border;
   }
@@ -721,7 +721,7 @@ ul#products {
   padding: 10px;
 
   legend {
-    text-transform: uppercase;
+    text-transform: lettercase;
     font-weight: bold;
     font-size: $base_font_size + 2;
     color: $link_text_color;
@@ -760,7 +760,7 @@ ul#products {
     }
 
     &#order-total {
-      text-transform: uppercase;
+      text-transform: lettercase;
       font-size: $base_font_size + 4;
       color: $body_text_color;
 
@@ -817,14 +817,14 @@ ul#products {
   .stock-shipping-method-title {
     background-color: lighten($body_text_color, 70);
     text-align: center;
-    text-transform: uppercase;
+    text-transform: lettercase;
     font-weight: normal;
     font-size :11px;
   }
 
   .stock-location {
     text-align: center;
-    text-transform: uppercase;
+    text-transform: lettercase;
     font-size: 12px;
     font-weight: normal;
     background-color: $link_text_color;
@@ -921,7 +921,7 @@ div[data-hook="inside_cart_form"] {
 
   #subtotal {
     text-align: right;
-    text-transform: uppercase;
+    text-transform: lettercase;
     margin-top: 15px;
 
     span.order-total {
@@ -940,13 +940,13 @@ div[data-hook="inside_cart_form"] {
 /*--------------------------------------*/
 #existing-customer, #new-customer, #forgot-password {
   h6 {
-    text-transform: uppercase;
+    text-transform: lettercase;
   }
 }
 
 #registration {
   h6 {
-    text-transform: uppercase;
+    text-transform: lettercase;
   }
 
   #existing-customer {
@@ -987,7 +987,7 @@ table.order-summary {
 
         &:first-child {
           a {
-            text-transform: uppercase;
+            text-transform: lettercase;
             font-weight: bold;
             color: $link_text_color;
           }

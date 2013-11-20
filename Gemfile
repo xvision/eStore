@@ -48,3 +48,4 @@ gem 'spree_store_credits', :github => "xvision/spree_store_credits", :branch => 
 gem 'spree_print_invoice' , :github => "xvision/spree_print_invoice", :branch => '2-1-stable'
 gem 'spree_product_groups', :github => "xvision/spree_product_groups", :branch => '2-1-stable'
 gem 'spree_related_products', :github => "xvision/spree_related_products", :branch => '2-1-stable'
+gem 'spree_address_book', :github => "tuxdapenguin/spree_address_book", :branch => '2-1-stable'

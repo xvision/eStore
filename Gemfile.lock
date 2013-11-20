@@ -12,6 +12,14 @@ GIT
       spree_frontend (~> 2.1.0)
 
 GIT
+  remote: git://github.com/tuxdapenguin/spree_address_book.git
+  revision: eba5f5d05f4d2bcdae0a916a045d42d521b0dd62
+  branch: 2-1-stable
+  specs:
+    spree_address_book (2.1.1)
+      spree_core
+
+GIT
   remote: git://github.com/xvision/spree_print_invoice.git
   revision: 2ce9672a9b15ea07943b40f0818a540db14f92fb
   branch: 2-1-stable
@@ -345,6 +353,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   spree (= 2.1.2)
+  spree_address_book!
   spree_auth_devise!
   spree_print_invoice!
   spree_product_groups!

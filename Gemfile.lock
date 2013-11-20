@@ -46,6 +46,14 @@ GIT
       spree_core (~> 2.1.0)
 
 GIT
+  remote: git://github.com/xvision/spree_static_content.git
+  revision: 5966c16c9ef17d8aafc9d599de453ca5df1273f0
+  branch: 2-1-stable
+  specs:
+    spree_static_content (2.1.0.beta)
+      spree_core (~> 2.1.0)
+
+GIT
   remote: git://github.com/xvision/spree_store_credits.git
   revision: c90ad5cfeba608e388c3c4763119b9357eeb8ff3
   branch: 2-1-stable
@@ -342,6 +350,7 @@ DEPENDENCIES
   spree_product_groups!
   spree_related_products!
   spree_social_products!
+  spree_static_content!
   spree_store_credits!
   therubyracer
   turbolinks

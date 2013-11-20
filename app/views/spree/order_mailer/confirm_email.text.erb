@@ -1,0 +1,23 @@
+Dear <%= @order.bill_address.firstname %>
+
+An invoice for your order at Jhola.com has been generated. For your convenience a copy has been attached to this email in plain text format.
+
+============================================================
+Order Summary
+============================================================
+<% @order.line_items.each do |item| %>
+  <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%> (<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %>
+<% end %>
+============================================================
+Subtotal = <%= @order.display_item_total %>
+
+<% @order.adjustments.eligible.each do |adjustment| %>
+  <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
+<% end %>
+
+Order Total = <%= @order.display_total %>
+
+Please contact us if you have any questions. Thank you for your business!
+
+--
+This message was sent to <%= @order.email %> as the billing contact for <%= @order.bill_address.firstname %>. You can track your order at jho.la/1234. To manage your account go to jho.la/cp52.

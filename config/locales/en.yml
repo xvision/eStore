@@ -21,38 +21,3 @@
 
 en:
   hello: "Hello world"
-
-  # Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
-
-  bookmark_or_share_this: "Share this"
-  social_sharing_buttons: "Social Sharing Settings"
-  social_sharing_buttons_description: "Add social sharing buttons to product pages"
-  social_sharing_settings_description: "Enable or disable sharing to these networks on product pages"
-  social_sharing_settings_updated: "Sharing settings have been successfully updated."
-
-  # Store credit
-
-  spree:
-    add_store_credit: "Add Jhola credit"
-    current_store_credit: "Current Jhola credit"
-    editing_store_credit: "Editing Jhola credit"
-    enter_desired_amount_of_store_credit: "Enter amount, which you want to use"
-    listing_store_credits: "Jhola credits"
-    new_store_credit: "New Jhola credit"
-    manage_store_credits: "Manage Jhola credits"
-    orders_with_store_credit: "Orders with Jhola credit"
-    remaining_amount: "Remaining amount"
-    store_credit: "Jhola Credits"
-    store_credit_maximum_amount: "The Jhola credit amount should be less or equal to %{amount}. This is mandatory for the order to be confirmed."
-    store_credits: "Jhola Credits"
-    you_have_store_credit: "You have %{amount} of Jhola credits"
-    was_fully_used: "was fully used"
-    was_partially_used: "was partially used"
-    cannot_edit_used: "Cannot be edited because it has been used"
-    errors:
-      messages:
-        store_credit_minimum_order_not_reach: "Order's item total is less than the minimum allowed (%{amount}) to use Jhola credit."
-
-

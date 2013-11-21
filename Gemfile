@@ -49,3 +49,4 @@ gem 'spree_print_invoice' , :github => "xvision/spree_print_invoice", :branch =>
 gem 'spree_product_groups', :github => "xvision/spree_product_groups", :branch => '2-1-stable'
 gem 'spree_related_products', :github => "xvision/spree_related_products", :branch => '2-1-stable'
 gem 'spree_address_book', :github => "tuxdapenguin/spree_address_book", :branch => '2-1-stable'
+gem 'spree_variant_options', :github => "tuxdapenguin/spree_variant_options", :branch => '2-1-stable'

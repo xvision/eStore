@@ -20,6 +20,17 @@ GIT
       spree_core
 
 GIT
+  remote: git://github.com/tuxdapenguin/spree_variant_options.git
+  revision: d5a86d066aa4c91d3fc9e72a01848b76d35c0df5
+  branch: 2-1-stable
+  specs:
+    spree_variant_options (0.7)
+      spree_api (~> 2.1)
+      spree_backend (~> 2.1)
+      spree_core (~> 2.1)
+      spree_frontend (~> 2.1)
+
+GIT
   remote: git://github.com/xvision/spree_print_invoice.git
   revision: a8343214c6a823df01d5f2e8033866b92fb8d83c
   branch: 2-1-stable
@@ -358,6 +369,7 @@ DEPENDENCIES
   spree_social_products!
   spree_static_content!
   spree_store_credits!
+  spree_variant_options!
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)

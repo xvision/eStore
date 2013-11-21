@@ -11,4 +11,5 @@
  *= require admin/spree_social_products
  *= require admin/spree_product_groups
  *= require admin/spree_address_book
+ *= require admin/spree_variant_options
 */

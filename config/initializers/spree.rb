@@ -14,6 +14,7 @@ config.default_country_id = 3
   # config.site_name = "Spree Demo Site"
 config.site_name = "eStore - demo"
 config.allow_ssl_in_production = false
+  config.override_actionmailer_config = false
 end
 
 Spree.user_class = "Spree::User"

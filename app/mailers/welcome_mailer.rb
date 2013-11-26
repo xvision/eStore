@@ -4,6 +4,6 @@ class WelcomeMailer < ActionMailer::Base
   def welcome_email(email_to)
     mail(to: email_to,
          subject: 'Welcome to My Awesome Site',
-         template_name: 'welcome_email')
+         template_name: 'welcome_email').deliver
   end
 end

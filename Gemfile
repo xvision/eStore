@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Locked here due to issue with 6.0.0
-gem "money", "5.1.1"
+# gem "money", "5.1.1"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,7 +40,7 @@ group :development, :test do
 end
 
 # Latest stable version as on 11.11.2013
-gem 'spree', '2.1.2'
+gem 'spree', github: 'spree/spree', branch: '2-1-stable'
 gem 'spree_auth_devise', :github => "spree/spree_auth_devise", :branch => '2-1-stable'
 gem 'spree_static_content', :github => "xvision/spree_static_content", :branch => '2-1-stable'
 gem 'spree_social_products', :github => "xvision/spree_social_products", :branch => '2-1-stable'

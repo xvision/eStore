@@ -1,17 +1,147 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Welcome to example.com</h1>
-    <p>
-      You have successfully signed up to example.com,
-      your username is<br/>
-    </p>
-    <p>
-      To login to the site, just follow this link.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
-  </body>
+<head>
+<title>jhola - http://jhola.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body style="background-color:#FFFFFF">
+
+<div style="border: 1px solid #CCC;border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+;-mox-box-shadow:   0 0 7px 0px #f5f3ed;
+-webkit-box-shadow:   0 0 7px 0px #f5f3ed;
+box-shadow:   0 0 7px 0px #f5f3ed;
+; margin: 10px; background-color: #FFF">
+<div style="border-top-left-radius: 5px;
+-webkit-border-top-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+;border-top-right-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topright: 5px;
+;width:100%;overflow:hidden;background-color:#f5f3ed"><A target=_blank style="font-size:12px;color:#5982b3;font-family:Arial, Helvetica, sans-serif; font-weight: bold;"  href="http://jhola.com"
+   target=_blank><img border=0 style="border-top-left-radius: 5px;
+-webkit-border-top-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+;border-top-right-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topright: 5px;
+"
+    src="https://static.e-junkie.com/sslpic/106691.d7ac91c0531c86fc18a1a621da517bcc.jpg"
+    alt="jhola: Shop Smart.Shop Global"
+    </a></div>
+
+<div style="padding:10px; font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;">
+
+<div style="float:right; vertical-align:center; padding-right:10px; font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;">
+<A title="Like jhola on Facebook" target="_blank"
+   href="https://www.facebook.com/pages/jhola"><img width="24"
+   height="24" alt="Facebook"
+   src="http://icon-cache.s3.amazonaws.com/icons/custom/24x24/plain/FaceBook-icon.png"></a>
+&nbsp; <A target=_blank style="font-size:12px;color:#5982b3;font-family:Arial, Helvetica, sans-serif; font-weight: bold;"  title="Follow \@jhola on Twitter" target="_blank"
+   href="https://twitter.com/jholaindia"><img width="24" height="24" alt="Twitter"
+   src="http://icon-cache.s3.amazonaws.com/icons/custom/24x24/plain/Twitter-icon.png"></a>
+</div>
+
+
+<div style="clear:both"></div><!--BODY--><div
+<Td style="border-top: 1px solid #a3bfd9; margin:5px 0 5px 0; padding: 3px 0 3px 0;border-bottom: 1px solid #a3bfd9; color:#5982b3;font-family: Arial, Helvetica, sans-serif; font-size: 18px;"> Order #<%= @order.number %></td>
+<Td align=right style="color:#5982b3;font-family: Arial, Helvetica, sans-serif; font-size: 16px;">Date: <%= @order.completed_at.to_date %></td>
+</div>
+
+<table width=100% cellpadding=3 cellspacing=0 border=0>
+<tr valign=top>
+<tr>
+<td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;" width=50%>
+<b><big>Bill To</big></b><br>
+<br>
+<tt><%= @order.bill_address %><br>
+<!--<br>
+Phone: <%= @order.bill_address.phone %></tt>-->
+</td><td align=right style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;">
+<b><big>Ship To</big></b><br>
+<br>
+<tt><%= @order.ship_address %><br>
+<!--<br>
+Phone: <%= @order.ship_address.phone %></tt>-->
+</table>
+</td></tr>
+
+<tr><Td colspan=2 style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;">           
+<br>
+
+
+<table cellpadding=4 cellspacing=0 border=0 width=100%>
+<tr id=Item_details>
+<Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
+<b>SKU</b></td>
+<Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
+<b>Item</b></td>
+<Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
+<b>Variant</b></td>
+<Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
+<b>Unit Price</b></td>
+<Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
+<b>QTY</b></td>
+<Td align=right style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
+<b>Item Total</b></td>
+</tr>
+
+
+
+  <% @order.line_items.each do |item| %>
+    <tr>
+      <td class="cell"><%=item.variant.sku unless @receipt%></td>
+      <td class="cell"><%= item.variant.product.fullname rescue item.variant.product.name %></td>
+      <td class="cell"><%= item.variant.options_text %></td>
+      <td class="cell price"><%= item.single_money unless @receipt%></td>
+      <td class="cell qty"><%=item.quantity %></td>
+      <td align=right class="cell total"><%= item.display_amount %></td>
+    </tr>
+    <% if item.respond_to? :discount and item.discount > 0 %>
+      <tr>
+        <td class="cell">&nbsp;</td>
+        <td class="cell">(<%= t(:discount) %>)</td>
+        <td class="cell price"><%=number_to_currency(-1 * item.discount) %></td>
+        <td class="cell qty">&nbsp;</td>
+        <td align=right class="cell total"><%=number_to_currency(-1 * item.discount * item.quantity) %></td>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <tr><td style=";font-weight:bold; background-color:#EEE" nowrap></td><td style=";font-weight:bold; background-color:#EEE" nowrap>Total</td><td style=";font-weight:bold; background-color:#EEE"  nowrap>&nbsp;</td><td style=";font-weight:bold; background-color:#EEE"  nowrap>&nbsp;</td><td style=";font-weight:bold; background-color:#EEE" ><b></b></td><td nowrap style=";font-weight:bold; background-color:#EEE" align=right><%= @order.display_item_total %></td></tr>
+</table>
+</table> 
+
+
+** Thank you for your business! Please save this for your records.
+<br>
+<br>
+
+<div><!--/BODY--></div>
+
+
+
+
+<div style="border-top: 1px solid #999; padding: 0px 15px; text-align: center; background-color: #ffffff; line-height: 1.0em; border-bottom
+">
+<p style="color: #999; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">
+Fizz Retail (P) Limited | 909, Hemkunt House, Rajindra Place, New Delhi 110008, India.</p>
+
+<p style="color: #808080; font-size: 12px; font-family: Arial, Helvetica, sans-serif;">
+<A target=_blank style="text-decoration:none; font-size:12px;color:#5982b3;font-family:Arial, Helvetica, sans-serif; font-weight: bold;"  href="http://jhola.com">jhola.com</a>
+/
+<A target=_blank style="text-decoration:none; font-size:12px;color:#5982b3;font-family:Arial, Helvetica, sans-serif; font-weight: bold;"  href="mailto:hello@jhola.com">hello@jhola.com</a>
+/
+<A target=_blank style="text-decoration:none; font-size:12px;color:#5982b3;font-family:Arial, Helvetica, sans-serif; font-weight: bold;"  href="http://jhola.com/personal-shopper.html">personal shopper</a>
+/
+<A target=_blank style="text-decoration:none; font-size:12px;color:#5982b3;font-family:Arial, Helvetica, sans-serif; font-weight: bold;"  href="http://jhola.com/faqs">faqs</a>
+/
+<A target=_blank style="text-decoration:none; font-size:12px;color:#5982b3;font-family:Arial, Helvetica, sans-serif; font-weight: bold;"  href="http://jhola.com/account">my account</a>
+</p>
+</div>
+
+</div>
+</body>
 </html>

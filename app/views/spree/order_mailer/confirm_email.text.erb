@@ -1,4 +1,4 @@
-An invoice for your order at Jhola.com has been generated. For your convenience a copy has been attached to this email in plain text format.
+An invoice for your order at Jhola.com has been generated. For your convenience a copy has been attached to this email.
 
 
 Order:          #<%= @order.number %>
@@ -8,7 +8,7 @@ Amount:       <%= @order.display_item_total %>
 
 Please contact us if you have any questions. Thank you for your business!
 
-A PDF option for invoice delivery is also available if you prefer a PDF formatted attachment instead of plain text. Invoices may also be viewed online. If you are unable to view the attached invoice please contact us.
+If you are unable to view the invoice please contact us.
 
 --
-This message was sent to <%= @order.email %> as the billing contact for <%= @order.bill_address.full_name %>. You can track your order at http://jho.la/1234. To manage your account go to http://jho.la/cp52.
+This message was sent to <%= @order.email %> as the billing contact for <%= @order.bill_address.full_name %>. To manage your account go to http://jho.la/cp52.

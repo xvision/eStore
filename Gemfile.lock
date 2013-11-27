@@ -126,7 +126,7 @@ GIT
 
 GIT
   remote: git://github.com/xvision/spree_store_credits.git
-  revision: c90ad5cfeba608e388c3c4763119b9357eeb8ff3
+  revision: 6ae528ea1a987a825b9050f28bedf8253087f2e2
   branch: 2-1-stable
   specs:
     spree_store_credits (1.1.1)

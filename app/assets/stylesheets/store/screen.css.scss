@@ -38,13 +38,20 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
 a {
   text-decoration: none;
   color: $link_text_color;
+  background: inherit;
 
   &:hover {
     color: darken($link_text_color, 10);
+    text-decoration: underline;
   }
 
   &:active, &:focus {
     outline: none;
+  }
+
+  &:visited {
+    color: #CA726D;
+    background: inherit;
   }
 }
 
@@ -212,6 +219,14 @@ a.button {
   margin-top: 0px;
   vertical-align: bottom;
 }
+
+.green.button,
+.green.button:visited { background-color: #91bd09 }
+.green.button:hover { background-color: #749a02 }
+.red.button,
+.red.button:visited { background-color: #C41E3A }
+.red.button:hover { background-color: #B31B1B }
+span.subbuttontext { font-size: 0.6em }
 
 /*--------------------------------------*/
 /* Footer

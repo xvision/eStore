@@ -12,7 +12,7 @@ config.default_country_id = 3
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
-config.site_name = "eStore - demo"
+config.site_name = "Jhola"
 config.allow_ssl_in_production = false
 config.override_actionmailer_config = false
 end

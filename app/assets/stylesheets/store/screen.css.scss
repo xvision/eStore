@@ -334,6 +334,43 @@ table {
 /*--------------------------------------*/
 /* Navigation
 /*--------------------------------------*/
+
+#global_nav div#more_menu {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    z-index: 100;
+}
+    #global_nav div#more_menu div {
+        width: 125px;
+        text-align: left;
+        border: 1px solid #c4c3ba;
+        border-top: none;
+        background: #d5d5cc;
+        padding: 3px 4px 3px 8px;
+    }
+        #global_nav div#more_menu div span {
+            border-bottom: 1px solid #b5b5aa;
+            display: block;
+            padding: 5px 0;
+            white-space: nowrap;
+            margin-right: 3px;
+        }
+            #global_nav div#more_menu div span a { font-weight: normal }
+            #global_nav div#more_menu div span a:hover { text-decoration: underline }
+        #global_nav div#more_menu div span.last_menu_item { border: 0 }
+#global_nav ul#account_menu {
+    position: absolute;
+    top: 18px;
+    right: 0px;
+    z-index: 100;
+    background: #d5d5cc;
+    padding: 3px 4px 3px 8px;
+    width: 125px;
+    border: 1px solid #c4c3ba;
+    border-top: none;
+}
+
 nav#top-nav-bar {
   text-align: right;
   margin-top: 10px;
@@ -495,19 +532,28 @@ nav#taxonomies {
 /* Flash notices & errors
 /*--------------------------------------*/
 .flash {
-  padding: 10px;
+  padding: 5px 10px;
   color: $layout_background_color;
+  border-radius:6px;
   font-weight: bold;
   margin-bottom: 10px;
 
   &.notice {
-    background-color: $link_text_color;
+    color: $c_blue;
+    border: $default_border;
+    border-color: $c_blue;
   }
   &.success {
-    background-color: $c_green;
+    color: $c_green;
+    border: $default_border;
+    border-color: $c_green;
   }
+
   &.error {
-    background-color: $c_red;
+    color: $c_red;
+    border: $default_border;
+    border-color: $c_red;
+    
   }
 }
 
@@ -705,7 +751,7 @@ ul#products {
 
   li {
     margin-right: 6px;
-    border: $default_border;
+    #border: $default_border;
 
     img {
       padding: 5px;

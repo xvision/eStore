@@ -19,7 +19,7 @@
         <h6><%= Spree.t(:shipments) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:delivery) unless @order.completed? %></h6>
         <div class="delivery">
           <% order.shipments.each do |shipment| %>
-            <%= shipment.stock_location.name %>
+            <!-- <%= shipment.stock_location.name %> -->
             <%= shipment.shipping_method.name %>
             <br/>
           <% end %>
@@ -40,7 +40,7 @@
 
 </div>
 
-<hr />
+<!-- <hr /> -->
 
 <table id='line-items' class="index columns alpha omega sixteen" data-hook="order_details">
   <col width="15%" valign="middle" halign="center">
@@ -81,7 +81,7 @@
   </tbody>
   <tfoot id="order-total" data-hook="order_details_total">
     <tr class="total">
-      <td colspan="4"><b><%= Spree.t(:order_total) %>:</b></td>
+      <td colspan="4"><b><%= Spree.t(:order_total) %></b></td>
       <td class="total"><span id="order_total"><%= @order.display_total.to_html %></span></td>
     </tr>
   </tfoot>
@@ -97,7 +97,7 @@
   <% end %>
   <tfoot id="subtotal" data-hook="order_details_subtotal">
     <tr class="total" id="subtotal-row">
-      <td colspan="4"><b><%= Spree.t(:subtotal) %>:</b></td>
+      <td colspan="4"><b><%= Spree.t(:subtotal) %></b></td>
       <td class="total"><span><%= @order.display_item_total.to_html %></span></td>
     </tr>
   </tfoot>

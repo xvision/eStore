@@ -41,8 +41,7 @@ a {
   background: inherit;
 
   &:hover {
-    color: darken($link_text_color, 10);
-    text-decoration: underline;
+    font-weight: bold;
   }
 
   &:active, &:focus {
@@ -50,7 +49,7 @@ a {
   }
 
   &:visited {
-    color: #CA726D;
+    color: lighten($link_text_color, 10);
     background: inherit;
   }
 }
@@ -120,12 +119,15 @@ input[type="password"], input[type="search"], input[type="tel"],
 input[type="text"], input[type="time"], input[type="url"],
 input[type="week"] {
   border: $default_border;
-  padding: 5px 10px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  padding: 3px 10px;
   font-family: $ff_base;
   font-size: $input_box_font_size;
 
   &:active, &:focus {
-    border-color: $link_text_color;
+    # border-color: $link_text_color;
     outline: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -157,49 +159,29 @@ fieldset {
 
 input[type="submit"], input[type="button"],
 input[type= "reset"], button, a.button {
-  background-color: #F0F0F0;
-  background-image: none;
-  text-shadow: none;
-  color: #797979;
+   background-color:#f5f3ed;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #0079D1;
+  display:inline-block;
+  color:#0069B6;
+  font-size:12px;
   font-weight: bold;
-  font-size: $button_font_size;
-  font-family: $ff_base;
-  border: 1px solid #797979;
-  padding: 6px 10px 5px;
-  vertical-align:  top;
-
-  -webkit-font-smoothing: antialiased;
-
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-   -khtml-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-       -o-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-  -webkit-border-radius: 5px;
-   -khtml-border-radius: 5px;
-     -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-       -o-border-radius: 5px;
-          border-radius: 5px;
+  padding:3px 8px;
+  text-decoration:none;
 
   &.large {
     padding: 7px 10px;
-    font-size: $button_font_size + 2;
   }
-
+  
   &.gray {
-    background-color: #797979;
-    text-shadow: none;
-    color: #F0F0F0;
+    background-color: lighten($body_text_color, 20);
     border-color: lighten($body_text_color, 10);
   }
 
   &:hover {
-    background-image: none;
-    background-color: #F0F0F0;
-    text-shadow: none;
-    border-color: $body_text_color;
-    color: #797979;
+  background-color: darken(#f5f3ed, 10);
   }
 }
 
@@ -213,20 +195,40 @@ input[type="checkbox"], label {
   vertical-align: middle;
 }
 
-a.button {
-  display: inline-block;
-  line-height: 15px;
-  margin-top: 0px;
-  vertical-align: bottom;
+.btn { font-size: 13px; }
+.btn.btn-large { font-size: 15px; padding: 14px; margin-top:14px; }
+
+.btn.HushmailOrangeButton {
+  color: #fff;
+  background-color: #ffbb00;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom,
+from(#ffbb00),
+    to(#ff6600) );
+  background-image: -moz-linear-gradient(top, #ffbb00, #ff6600);
+  background-image: -ms-linear-gradient(top, #ffbb00, #ff6600);
+  background-image: -webkit-gradient(linear, left top, left bottom,
+color-stop(0%, #ffbb00),
+    color-stop(100%, #ff6600) );
+  background-image: -webkit-linear-gradient(top, #ffbb00, #ff6600);
+  background-image: -o-linear-gradient(top, #ffbb00, #ff6600);
+  background-image: linear-gradient(top, #ffbb00, #ff6600);
+  filter:
+progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbb00',
+    endColorstr='#ff6600', GradientType=0 );
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -moz-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #ff6600 #ff6600 #885a25;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0,
+0.25);
 }
 
-.green.button,
-.green.button:visited { background-color: #91bd09 }
-.green.button:hover { background-color: #749a02 }
-.red.button,
-.red.button:visited { background-color: #C41E3A }
-.red.button:hover { background-color: #B31B1B }
-span.subbuttontext { font-size: 0.6em }
+.btn.HushmailOrangeButton:hover {
+  background-position: 0 15px;
+}
+
+
 
 /*--------------------------------------*/
 /* Footer
@@ -235,6 +237,59 @@ footer#footer {
   padding: 3px 0;
   border-top: $default_border;
 }
+
+.footer_links a {
+    display: block;
+            float: left;
+            padding: 0px 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
+            font-size: 12px;
+            line-height: 16px;
+            background-color: #f5f3ed;
+            color: #005493;
+            margin-left: 4px;
+            margin-top: 2px;
+            margin-right: 4px;
+}
+.footer_links a:hover {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+    -moz-box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+    box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+    -webkit-box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+    background: -webkit-gradient(linear, left top, left bottom, from(#c8c5bd), to(#d6d3ca));
+    background: #d6d3ca;
+}
+.footer_copyright {
+    font-size: 9pt;
+    color: #999;
+    text-align: center;
+}
+
+.footer_additional_copyright {
+    font-size: 11px;
+    color: #777;
+    line-height: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    clear: both;
+}
+
+.footer_left_side { float: left }
+.footer_right_side { 
+    float: right;
+    font-size: 11px;
+    color: #777;
+ }
 
 /*--------------------------------------*/
 /* Paragraphs
@@ -248,8 +303,10 @@ p {
 /*--------------------------------------*/
 table {
   thead {
-    background-color: $table_head_color;
+    # border-top: $default_border;
+    background-color: #EEEEEE;
     text-transform: lettercase;
+    # border-bottom: $default_border;
 
     tr {
       th {
@@ -284,13 +341,38 @@ nav#top-nav-bar {
   ul {
     li {
       margin-bottom: 5px;
-      padding-left: 10px;
+      padding-left: 0px;
 
       a{
-        # font-weight: bold;
-        font-size: $header_navigation_font_size;
-        text-transform: lettercase;
+        color: #615851;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 15px;
+        font-size: 12px;
+        text-shadow: 0 1px 1px rgba(250,250,250,0.8);
+        display: block;
+        padding: 3px 7px;
       }
+
+      a:hover {
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      -webkit-border-radius: 1em;
+      -moz-border-radius: 1em;
+      -ms-border-radius: 1em;
+      -o-border-radius: 1em;
+      border-radius: 1em;
+      -webkit-box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+      -moz-box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+      box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+      -webkit-box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+      -moz-box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+      box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+      background: -webkit-gradient(linear, left top, left bottom, from(#c8c5bd), to(#d6d3ca));
+      background: #f5f3ed;
+      
+    }
     }
   }
 }
@@ -300,20 +382,41 @@ nav #main-nav-bar {
   font-weight: bold;
   margin-top: 0px;
   border-bottom: $default_border;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 
   li {
 
     a {
-      font-size: $horizontal_navigation_font_size;
-      padding: 5px;
+        color: #615851;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 15px;
+        font-size: 12px;
+        text-shadow: 0 1px 1px rgba(250,250,250,0.8);
+        display: block;
+        padding: 3px 7px;
     }
 
-    &:first-child {
-      a {
-        padding-left: 0
-      }
+    a:hover {
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      -webkit-border-radius: 1em;
+      -moz-border-radius: 1em;
+      -ms-border-radius: 1em;
+      -o-border-radius: 1em;
+      border-radius: 1em;
+      -webkit-box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+      -moz-box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+      box-shadow: 0 1px 3px rgba(250,250,250,0.8);
+      -webkit-box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+      -moz-box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+      box-shadow: inset 0 0px 3px rgba(0,0,0,0.3);
+      background: -webkit-gradient(linear, left top, left bottom, from(#c8c5bd), to(#d6d3ca));
+      background: #f5f3ed;
     }
+
+    
 
     &#link-to-cart {
       float: right;
@@ -321,7 +424,8 @@ nav #main-nav-bar {
       # background: asset-url("store/cart.png") no-repeat left center;
 
       &:hover {
-        border-color: $link_text_color;
+      cursor: pointer;
+      
 
         .amount {
           border-color: $link_text_color;
@@ -329,16 +433,25 @@ nav #main-nav-bar {
       }
 
       a {
-        font-weight: normal;
-        font-size: $horizontal_navigation_font_size;
-        color: $link_text_color;
+        color: #615851;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 15px;
+        font-size: 12px;
+        text-shadow: 0 1px 1px rgba(250,250,250,0.8);
+        display: block;
+        padding: 3px 7px;
 
         .amount {
-          font-size: $horizontal_navigation_font_size + 2;
+          color: #EE8033;
+          text-decoration: none;
           font-weight: bold;
-          border-left: $default_border;
-          padding-left: 5px;
-          padding-bottom: 5px;
+          line-height: 15px;
+          font-size: 13px;
+          text-shadow: 0 1px 1px rgba(250,250,250,0.8);
+          # border-left: $default_border;
+          padding: 3px 7px;
+
         }
       }
     }
@@ -420,7 +533,6 @@ nav#taxonomies {
 /* Main search bar
 /*--------------------------------------*/
 #search-bar {
-  display: block;
 }
 
 /*--------------------------------------*/
@@ -649,8 +761,9 @@ ul#products {
     float: left;
     margin-right: 20px;
     font-weight: bold;
+    border-radius:6px;
     text-transform: lettercase;
-    padding: 5px 20px;
+    padding: 3px 20px;
     color: lighten($body_text_color, 20);
 
     &.current-first, &.current {
@@ -730,23 +843,40 @@ ul#products {
 }
 
 #billing, #shipping, #shipping_method,
-#payment, #order_details, #order_summary {
+#payment {
   margin-top: 10px;
   border: $default_border;
   padding: 10px;
 
   legend {
     text-transform: lettercase;
+    #text-decoration: underline;
+    border: none;
     font-weight: bold;
-    font-size: $base_font_size + 2;
-    color: $link_text_color;
+    font-size: $base_font_size + 4;
+    color: #999;
     padding: 5px;
     margin-left: 15px;
   }
 }
 
 #order_details, #order_summary {
-  padding: 0;
+  margin-top: 10px;
+  border: none;
+  padding: 10px;
+  padding: 10;
+
+  legend {
+    text-transform: lettercase;
+    #text-decoration: underline;
+    border: $default_border;
+    font-weight: bold;
+    font-size: $base_font_size + 4;
+    color: #EE8033;
+    padding: 5px;
+    margin-left: 15px;
+  }
+
 
   div:last-child {
     margin-left: -1px;

@@ -5,10 +5,10 @@
       <%= form.fields_for :shipments do |ship_form| %>
 
         <div class="shipment">
-          <h3 class="stock-location" data-hook="stock-location">
+          <!-- <h3 class="stock-location" data-hook="stock-location">
             <%= Spree.t(:package_from) %>
             <strong class="stock-location-name" data-hook="stock-location-name"><%= ship_form.object.stock_location.name %></strong>
-          </h3>
+          </h3> -->
 
           <table class="stock-contents" data-hook="stock-contents">
             <colgroup>
@@ -51,7 +51,7 @@
 
       <% end %>
 
-      <% if @differentiator.missing? %>
+      <% if @differentiator.try(:missing?) %>
         <div class="shipment unshippable">
           <h3 class="stock-location" data-hook="stock-location">
             <%= Spree.t(:unshippable_items) %>
@@ -93,7 +93,7 @@
   </div>
 </fieldset>
 
-<br />
+<hr class="clear" />
 
 <div class="form-buttons" data-hook="buttons">
   <%= submit_tag Spree.t(:save_and_continue), :class => 'continue button primary' %>

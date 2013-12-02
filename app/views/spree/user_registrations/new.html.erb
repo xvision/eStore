@@ -2,25 +2,27 @@
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
 
-<div id="new-customer">
-  <div class="login_center" align="center">
-  <h4>Signup for a new account or <a href="/login">login</a></h4>
-  <hr>
+ <div id="new-customer">
+        <div class="login_center" style="text-align: center">
+            <login_h1>Create a new account</login_h1> or <login_h4>login to <a href="/login">your account</a></login_h4>
+            <hr>
 
-  <div data-hook="signup">
-    <%= form_for resource, :as => :spree_user, :url => spree.registration_path(@user) do |f| %>
-      <div data-hook="signup_inside_form">
-        <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
-        <div class="buttons">
-    <button type="submit" class="positive">
-        YaY
-      </div>
-      </div>
-    <% end %>
+            <div data-hook="signup">
+                <%= form_for resource, :as => :spree_user, :url => spree.registration_path(@user) do |f| %>
 
-  </div>
+                <div data-hook="signup_inside_form">
+                    <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
 
-</div>
-</div>
+                    <div class="buttons">
+                        <button class="positive" type="submit">Create</button>
+                    </div>
+                </div>
+                 <login_h6><p>When you create a Jhola account, you agree to our <strong><a href="/terms-and-conditions">Terms and Conditions</a></strong>, <br>and to receive periodic newsletters and emails from Jhola. <br>These emails include an unsubscribe link.</p></login_h6>
+                <% end %>
+            </div>
+        </div>
+    </div>
 
-<div data-hook="login_extras"></div>
+    <div data-hook="login_extras"></div>
+
+   

@@ -1,0 +1,25 @@
+<% self.title = "Brands" %>
+<% @body_id = 'brands' %>
+<% @meta_description = "Brands at LoveLula. Free worldwide shipping." %>
+<% @meta_keywords = "lovelula, organic skincare, organic skin care, natural skin care, natural skincare, organic beauty, beauty box" %>
+ 
+<div class="content">
+  <h1>LoveLula Brands</h1>
+  <div class="small-divider-grey"></div>
+  <ul class="letters">
+    <li class="go-to">Go To:</li>
+    <% ('A'..'Z').each do |letter| %>
+      <li><%= link_to letter, "#", class: "key-link", data: { letter: letter } %></li>
+    <% end %>
+  </ul>
+  <div class="small-divider-grey"></div>
+  <% brands = navigation_brands_taxons.group_by { |b| b.name[0] } %>
+  <% brands.keys.each do |key| %>
+    <ul class="brand-letters">
+      <li id="letter-<%= key %>" class="key"><%= key %></li>
+      <% brands[key].each do |taxon| %>
+        <li class="name"><%= link_to taxon.name, seo_url(taxon) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

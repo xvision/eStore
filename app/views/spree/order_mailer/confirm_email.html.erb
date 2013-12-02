@@ -77,8 +77,8 @@ Phone: <%= @order.ship_address.phone %></tt>-->
 <b>SKU</b></td>
 <Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
 <b>Item</b></td>
-<Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
-<b>Variant</b></td>
+<!-- <Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
+<b>Variant</b></td> -->
 <Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
 <b>Unit Price</b></td>
 <Td style="font-size:12px;color:#333;font-family:Arial, Helvetica, sans-serif;;border-bottom:1px solid #888;background-color:#EEE">
@@ -92,8 +92,8 @@ Phone: <%= @order.ship_address.phone %></tt>-->
   <% @order.line_items.each do |item| %>
     <tr>
       <td class="cell"><%=item.variant.sku unless @receipt%></td>
-      <td class="cell"><%= item.variant.product.fullname rescue item.variant.product.name %></td>
-      <td class="cell"><%= item.variant.options_text %></td>
+      <td class="cell"><%= item.variant.product.fullname rescue item.variant.product.name %>, <%= item.variant.options_text %></td>
+      <!-- <td class="cell"><%= item.variant.options_text %></td> -->
       <td class="cell price"><%= item.single_money unless @receipt%></td>
       <td class="cell qty"><%=item.quantity %></td>
       <td align=right class="cell total"><%= item.display_amount %></td>
@@ -109,7 +109,7 @@ Phone: <%= @order.ship_address.phone %></tt>-->
     <% end %>
   <% end %>
 
-  <tr><td style=";font-weight:bold; background-color:#EEE" nowrap></td><td style=";font-weight:bold; background-color:#EEE" nowrap>Total</td><td style=";font-weight:bold; background-color:#EEE"  nowrap>&nbsp;</td><td style=";font-weight:bold; background-color:#EEE"  nowrap>&nbsp;</td><td style=";font-weight:bold; background-color:#EEE" ><b></b></td><td nowrap style=";font-weight:bold; background-color:#EEE" align=right><%= @order.display_item_total %></td></tr>
+  <tr><td style=";font-weight:bold; background-color:#EEE" nowrap></td><td style=";font-weight:bold; background-color:#EEE" nowrap>Total</td><td style=";font-weight:bold; background-color:#EEE"  nowrap>&nbsp;</td><td style=";font-weight:bold; background-color:#EEE" ><b></b></td><td nowrap style=";font-weight:bold; background-color:#EEE" align=right><%= @order.display_item_total %></td></tr>
 </table>
 </table> 
 

@@ -329,9 +329,7 @@ input[type="search"] {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box; /* 2 */
     box-sizing: content-box;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
+    border-radius:none;
     top: 0px;
     left: 0px;
     width: 220px;
@@ -340,7 +338,7 @@ input[type="search"] {
     font-family: "futura-pt", "helvetica neue", helvetica, arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 20px;
     letter-spacing: 1px;
     color: #666;
 }

@@ -49,8 +49,8 @@ a {
   }
 
   &:visited {
-    color: lighten($link_text_color, 10);
-    background: inherit;
+    #color: lighten($link_text_color, 10);
+    #background: inherit;
   }
 }
 
@@ -117,17 +117,14 @@ input[type="datetime"], input[type="datetime-local"],
 input[type="email"], input[type="month"], input[type="number"],
 input[type="password"], input[type="search"], input[type="tel"],
 input[type="text"], input[type="time"], input[type="url"],
-input[type="week"] {
-  border: $default_border;
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  border-radius:6px;
+input[type="week"] { 
+  border-radius: none; 
+  border: 1px solid #dedede;
   padding: 3px 10px;
   font-family: $ff_base;
-  font-size: $input_box_font_size;
+  font-size: 100%;
 
   &:active, &:focus {
-    # border-color: $link_text_color;
     outline: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -158,21 +155,23 @@ fieldset {
 }
 
 input[type="submit"], input[type="button"],
-input[type= "reset"], button, a.button {
-   background-color:#f5f3ed;
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  border-radius:6px;
-  border:1px solid #0079D1;
-  display:inline-block;
-  color:#0069B6;
-  font-size:12px;
-  font-weight: bold;
-  padding:3px 8px;
+input[type= "reset"], button, a.button { 
+  display: inline-block;
+  margin:0 7px 0 0;
+  background-color:#f5f5f5;
+  border:1px solid #dedede;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+  font-size:100%;
+  line-height:130%;
   text-decoration:none;
+  font-weight:bold;
+  color:#565656;
+  cursor:pointer;
+  padding:5px 10px 6px 7px; /* Links */
 
   &.large {
-    padding: 7px 10px;
+    padding: 8px 10px;
   }
   
   &.gray {
@@ -181,7 +180,15 @@ input[type= "reset"], button, a.button {
   }
 
   &:hover {
-  background-color: darken(#f5f3ed, 10);
+    background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
+  }
+
+  &.button.positive:hover {
+    background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
   }
 }
 
@@ -195,39 +202,40 @@ input[type="checkbox"], label {
   vertical-align: middle;
 }
 
-.btn { font-size: 13px; }
-.btn.btn-large { font-size: 15px; padding: 14px; margin-top:14px; }
-
-.btn.HushmailOrangeButton {
-  color: #fff;
-  background-color: #ffbb00;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom,
-from(#ffbb00),
-    to(#ff6600) );
-  background-image: -moz-linear-gradient(top, #ffbb00, #ff6600);
-  background-image: -ms-linear-gradient(top, #ffbb00, #ff6600);
-  background-image: -webkit-gradient(linear, left top, left bottom,
-color-stop(0%, #ffbb00),
-    color-stop(100%, #ff6600) );
-  background-image: -webkit-linear-gradient(top, #ffbb00, #ff6600);
-  background-image: -o-linear-gradient(top, #ffbb00, #ff6600);
-  background-image: linear-gradient(top, #ffbb00, #ff6600);
-  filter:
-progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbb00',
-    endColorstr='#ff6600', GradientType=0 );
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  -moz-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  border-color: #ff6600 #ff6600 #885a25;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0,
-0.25);
+/* STANDARD */button:hover, .buttons a:hover{
+    background-color:#dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
 }
-
-.btn.HushmailOrangeButton:hover {
-  background-position: 0 15px;
+.buttons a:active{
+    background-color:#6299c5;
+    border:1px solid #6299c5;
+    color:#fff;
+}/* POSITIVE */button.positive, .buttons a.positive{
+    color:#529214;
 }
-
+.buttons a.positive:hover, button.positive:hover{
+    background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
+}
+.buttons a.positive:active{
+    background-color:#529214;
+    border:1px solid #529214;
+    color:#fff;
+}/* NEGATIVE */.buttons a.negative, button.negative{
+    color:#d12f19;
+}
+.buttons a.negative:hover, button.negative:hover{
+    background:#fbe3e4;
+    border:1px solid #fbc2c4;
+    color:#d12f19;
+}
+.buttons a.negative:active{
+    background-color:#d12f19;
+    border:1px solid #d12f19;
+    color:#fff;
+}
 
 
 /*--------------------------------------*/
@@ -240,20 +248,20 @@ footer#footer {
 
 .footer_links a {
     display: block;
-            float: left;
-            padding: 0px 4px;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            -ms-border-radius: 4px;
-            -o-border-radius: 4px;
-            border-radius: 4px;
-            font-size: 12px;
-            line-height: 16px;
-            background-color: #f5f3ed;
-            color: #005493;
-            margin-left: 4px;
-            margin-top: 2px;
-            margin-right: 4px;
+    float: left;
+    padding: 0px 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #f5f3ed;
+    color: #005493;
+    margin-left: 4px;
+    margin-top: 2px;
+    margin-right: 4px;
 }
 .footer_links a:hover {
     cursor: pointer;
@@ -268,6 +276,8 @@ footer#footer {
     background: -webkit-gradient(linear, left top, left bottom, from(#c8c5bd), to(#d6d3ca));
     background: #d6d3ca;
 }
+
+
 .footer_copyright {
     font-size: 9pt;
     color: #999;
@@ -359,6 +369,7 @@ table {
             #global_nav div#more_menu div span a { font-weight: normal }
             #global_nav div#more_menu div span a:hover { text-decoration: underline }
         #global_nav div#more_menu div span.last_menu_item { border: 0 }
+        
 #global_nav ul#account_menu {
     position: absolute;
     top: 18px;
@@ -498,7 +509,7 @@ nav #main-nav-bar {
 nav#taxonomies {
   .taxonomy-root {
     text-transform: lettercase;
-    border-bottom: $default_border;
+    #border-bottom: $default_border;
     margin-bottom: 5px;
     font-size: $main_navigation_header_font_size;
   }
@@ -693,6 +704,7 @@ ul#products {
   margin-bottom: 10px;
 }
 
+
 #sidebar_products_search {
   .navigation {
     margin-bottom: 15px;
@@ -702,7 +714,7 @@ ul#products {
     display: block;
     font-weight: bold;
     text-transform: lettercase;
-    border-bottom: 1px solid #ededed;
+    border-bottom: $default_border;
     margin-bottom: 5px;
     color: $link_text_color;
     font-size: $base_font_size + 2;
@@ -710,8 +722,30 @@ ul#products {
   }
 }
 
+.sidebar_title {
+  display: block;
+  font-weight: bold;
+  text-transform: lettercase;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 5px;
+  font-size: $base_font_size + 2;
+  line-height: 24px;
+}
+
+.sidebar_social {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding:6px 5px 0px 2px;
+  text-transform: lettercase;
+  #border-top: $default_border;
+  #border-bottom: $default_border;
+  
+}
+
 .taxon {
   overflow: hidden;
+  text-transform: lettercase;
 }
 
 #product-images {
@@ -1117,6 +1151,10 @@ div[data-hook="inside_cart_form"] {
 
     span.order-total {
       @extend span.price;
+      margin-right: 10px;
+      color: #EE8033;
+      font-size: $base_font_size + 2;
+
     }
   }
 }
@@ -1125,6 +1163,18 @@ div[data-hook="inside_cart_form"] {
   margin-top: -75px;
   float: left;
 }
+
+/*--------------------------------------*/
+/* Login
+/*--------------------------------------*/
+.login_left_side { float: left }
+.login_right_side { 
+    float: right;
+    font-size: 11px;
+    color: #777;
+ }
+.login_centre { float: center }
+
 
 /*--------------------------------------*/
 /* Account

@@ -12,6 +12,7 @@ Estore::Application.configure do
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
+  config.action_mailer.default_url_options = { :host => 'llocalhost:3000' }
 
   # Mail using Mailcatcher
   ActionMailer::Base.delivery_method = :smtp 

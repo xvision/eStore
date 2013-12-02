@@ -1,13 +1,15 @@
 <% @body_id = 'cart' %>
 
-<h1><%= Spree.t(:shopping_cart) %></h1>
+<center><h1>Jhola</h1>
 
-<% if @order.line_items.empty? %>
+    <br>
+    <% if @order.line_items.empty? %>
 
-  <div data-hook="empty_cart">
-    <p><%= Spree.t(:your_cart_is_empty) %></p>
-    <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %></p>
-  </div>
+    <div data-hook="empty_cart">
+        Your Jhola is empty<br>
+        <br>
+        <%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %>
+    </div><br>
 
 <% else %>
   <div data-hook="outside_cart_form">
@@ -19,30 +21,34 @@
         </div>
 
         <div id="subtotal" data-hook class="columns sixteen alpha omega">
-          <h5><%= Spree.t(:subtotal) %>: <span class="order-total"><%= @order.display_total.to_html %></span></h5>
+          <h5>Subtotal: <span class="order-total"><%= @order.display_total.to_html %></span></h5>
         </div>
 
+
         <div class="links columns sixteen alpha omega" data-hook="cart_buttons">
-          <%= order_form.text_field :coupon_code, :size => 10, :placeholder => Spree.t(:coupon_code) %>
+          <%= order_form.text_field :coupon_code, :size => 12, :placeholder => Spree.t(:coupon_code) %>
           <%= button_tag :class => 'primary', :id => 'update-button' do %>
-            <%= Spree.t(:update) %>
+            Update
           <% end %>
-          <%= button_tag :class => 'button checkout primary', :id => 'checkout-link', :name => 'checkout' do %>
-            <%= Spree.t(:checkout) %>
+          <%= button_tag :class => "positive", :id => 'checkout-link', :name => 'checkout' do %>
+            Checkout
           <% end %>
         </div>
       </div>
+
     <% end %>
   </div>
 
   <div id="empty-cart" data-hook>
     <%= form_tag empty_cart_path, :method => :put do %>
       <p id="clear_cart_link" data-hook>
-        <%= submit_tag Spree.t(:empty_cart) %>
-        <%= Spree.t(:or) %>
-        <%= link_to Spree.t(:continue_shopping), products_path %>
+        <div class="buttons">
+        <button type="submit" class="negative">Empty Jhola</button>
+        <%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %>
       </p>
     <% end %>
   </div>
+</div>
 
 <% end %>
+</center>

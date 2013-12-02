@@ -1,0 +1,22 @@
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @spree_user } %>
+
+<div id="forgot-password">
+  <div class="login_center" align="center">
+  <h4>Forgot your password?</h4>
+  <hr>
+
+  <%= form_for Spree::User.new, :as => :spree_user, :url => spree.reset_password_path do |f| %>
+    <p>
+      Email<br />
+      <%= f.email_field :email %>
+    </p>
+    <p>
+      <div class="buttons">
+    <button type="submit" class="positive">
+          Change Password
+      </div>
+    </p>
+    or <a href="/login">Login to your account</a>
+  <% end %>
+</div>
+</div>

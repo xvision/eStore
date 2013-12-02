@@ -41,7 +41,7 @@ a {
   background: inherit;
 
   &:hover {
-    font-weight: bold;
+    #font-weight: bold;
   }
 
   &:active, &:focus {
@@ -748,7 +748,7 @@ nav#taxonomies {
   .taxons-list {
     li {
       a {
-        font-size: $main_navigation_font_size
+        font-size: $base_font_size + 1;
       }
     }
   }
@@ -757,7 +757,15 @@ nav#taxonomies {
 #breadcrumbs {
   border-bottom: $default_border;
   padding: 3px 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  margin-top: -15px;
+  text-align: center;
+  font-size: $base_font_size + 2;
+  color: #999;
+  #background-color: #EEEEEE;
+
+
+
 
   li {
     a {
@@ -862,6 +870,11 @@ span.price {
 
 .taxon-title {
   font-size: $product_list_header_font_size;
+  #text-align: center;
+  #border-bottom: 1px solid #ededed;
+  padding:-5px 10px 6px 7px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .search-results-title {
@@ -881,7 +894,7 @@ ul#products {
   li {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     a {
       display: block;
@@ -891,7 +904,7 @@ ul#products {
         margin-top: 5px;
         font-size: $product_list_name_font_size;
         color: $product_link_text_color;
-        border-bottom: $default_border;
+        border-bottom: 1px solid #ededed;
         overflow: hidden;
       }
     }
@@ -923,6 +936,10 @@ ul#products {
 
 .subtaxon-title {
   text-transform: lettercase;
+  font-size: $base_font_size + 8;
+  margin-bottom: 20px;
+  #text-align: center;
+  #border: $default_border;
 
   a {
     color: $link_text_color;

@@ -12,5 +12,4 @@
 //= require_tree .
 //= require store/spree_social_products
 //= require store/spree_product_groups
-//= require store/spree_address_book
 //= require store/spree_variant_options

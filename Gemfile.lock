@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 191f764ba48b165b32adb11b95b5001d20498312
+  revision: 2e73ece91dadd0973759f8f6fd0fe369c95be9af
   branch: 2-1-stable
   specs:
     spree (2.1.4.beta)
@@ -52,7 +52,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: 3a9e16834734b8f56ed515d75fe99d2dd5e79dd9
+  revision: 9417dd85f99e205e0b28b00cb93ef0137171a59f
   branch: 2-1-stable
   specs:
     spree_auth_devise (2.1.0)
@@ -62,17 +62,6 @@ GIT
       spree_backend (~> 2.1.0)
       spree_core (~> 2.1.0)
       spree_frontend (~> 2.1.0)
-
-GIT
-  remote: git://github.com/tuxdapenguin/spree_variant_options.git
-  revision: d5a86d066aa4c91d3fc9e72a01848b76d35c0df5
-  branch: 2-1-stable
-  specs:
-    spree_variant_options (0.7)
-      spree_api (~> 2.1)
-      spree_backend (~> 2.1)
-      spree_core (~> 2.1)
-      spree_frontend (~> 2.1)
 
 GIT
   remote: git://github.com/xvision/spree_print_invoice.git
@@ -126,6 +115,17 @@ GIT
       spree_backend (~> 2.1.0)
       spree_core (~> 2.1.0)
       spree_frontend (~> 2.1.0)
+
+GIT
+  remote: git://github.com/xvision/spree_variant_options.git
+  revision: d5a86d066aa4c91d3fc9e72a01848b76d35c0df5
+  branch: 2-1-stable
+  specs:
+    spree_variant_options (0.7)
+      spree_api (~> 2.1)
+      spree_backend (~> 2.1)
+      spree_core (~> 2.1)
+      spree_frontend (~> 2.1)
 
 GEM
   remote: https://rubygems.org/

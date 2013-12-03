@@ -7,6 +7,8 @@
 # config.setting_name = 'new value'
 Spree.config do |config|
 
+config.currency = 'INR'
+
 # Sets default country to UK
 config.default_country_id = 3
   # Example:

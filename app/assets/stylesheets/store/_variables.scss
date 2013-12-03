@@ -59,5 +59,6 @@ $ff_base:       'Ubuntu', sans-serif !default;
       $base_font_size:                        13px !default;
       $border_color:                          lighten($body_text_color, 60) !default;
       $default_border:                        1px solid $border_color !default;
+      $dashed_border:                         1px dashed #999;
       $button_border_color:                   rgba(0, 138, 189, .75) !default;
       $table_head_color:                      lighten($body_text_color, 60) !default;

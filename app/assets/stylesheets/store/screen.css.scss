@@ -236,6 +236,21 @@ input[type="checkbox"], label {
     border:1px solid #d12f19;
     color:#fff;
 }
+/* PPOOSITIVE */button.ppoositive, .buttons a.ppoositive{
+    color:#529214;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+.buttons a.ppoositive:hover, button.ppoositive:hover{
+    background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
+}
+.buttons a.ppoositive:active{
+    background-color:#529214;
+    border:1px solid #529214;
+    color:#fff;
+}
 
 /*--------------------------------------*/
 /* login, create, forgot
@@ -474,7 +489,7 @@ color: lighten($link_text_color, 10);
 /*--------------------------------------*/
 footer#footer {
   padding: 3px 0;
-  border-top: $default_border;
+  border-top: $dashed_border;
 }
 
 .footer_links a {
@@ -660,7 +675,7 @@ nav #main-nav-bar {
   text-transform: lettercase;
   font-weight: bold;
   margin-top: 0px;
-  border-bottom: $default_border;
+  border-bottom: $dashed_border;
   padding-bottom: 2px;
 
   li {
@@ -1188,11 +1203,28 @@ ul#products {
   }
 }
 
-#order_details, #order_summary {
+#order_details {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 10px;
+
+  legend {
+    text-transform: lettercase;
+    #text-decoration: underline;
+    border: $default_border;
+    font-weight: bold;
+    font-size: $base_font_size + 4;
+    color: #999;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+#order_summary {
   margin-top: 10px;
   border: none;
   padding: 10px;
-  padding: 10;
 
   legend {
     text-transform: lettercase;
@@ -1463,7 +1495,7 @@ div[data-hook="inside_cart_form"] {
 }
 #order {
   p[data-hook="links"] {
-    margin-left: 10px;
+    margin-left: 0px;
     overflow: auto;
   }
 }

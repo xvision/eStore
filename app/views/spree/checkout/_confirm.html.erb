@@ -1,0 +1,12 @@
+<fieldset id="order_details" data-hook>
+  <div class="clear"></div>
+  <legend align="center"><%= Spree.t(@order.state, :scope => :order_state).titleize %></legend>
+  <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
+</fieldset>
+<hr class="clear" />
+<div class="buttons">
+    <button type="submit" class="ppoositive">
+        Complete your order</button>
+      
+  <script>Spree.disableSaveOnClick();</script>
+</div>
